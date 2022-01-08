@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.zadanie1">
-
+    package="com.example.providercaller">
+    <permission android:name="android.permission.QUERY_ALL_PACKAGES" />
+    <queries>
+        <package android:name="com.example.zadanie1" />
+        <provider android:authorities="com.example.zadanie1.MyContentProvider" />
+    </queries>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,20 +13,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Zadanie1">
-        <service
-            android:name=".CountingService"
-            android:enabled="true"
-            android:exported="true"></service>
-
-        <provider android:name="com.example.zadanie1.MyContentProvider"
-        android:authorities="com.example.zadanie1"
-        android:enabled="true"
-        android:exported="true">
-        </provider>
-
-        <activity
-            android:name=".UserActivity"
-            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

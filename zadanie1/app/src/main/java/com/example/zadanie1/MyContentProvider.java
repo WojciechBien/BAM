@@ -43,10 +43,6 @@ public class MyContentProvider extends ContentProvider {
         // to access a particular row
         // of the table
         uriMatcher.addURI(PROVIDER_NAME, "users/*", uriCode);}
-    MyContentProvider()
-    {
-
-    }
 
     @Override
     public Cursor query(Uri uri, String[] projection, String selection,

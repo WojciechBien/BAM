@@ -8,3 +8,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "zadanie1"
 include ':app'
+include ':app:providercaller'
